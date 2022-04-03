@@ -25,7 +25,6 @@ namespace UserAccount
 
                 switch (input)
                 {
-
                     #region deletedcase
                     /*case (int)Admin.CreateGroup:
                         Console.Write("\nPlease write the name of group: ");
@@ -106,8 +105,6 @@ namespace UserAccount
                         break;*/
                     #endregion
                     case 1:
-                        
-                        
                         break;
                     case 2:
                         Group Group = new Group();
