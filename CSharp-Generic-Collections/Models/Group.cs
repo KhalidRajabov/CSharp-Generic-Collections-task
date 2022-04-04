@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UserAccount.Models
 {
-    internal class Group
+    internal class Group:Student
     {
         private string _groupno = "AP101";
         private Student[] students;
@@ -46,11 +46,11 @@ namespace UserAccount.Models
         {
             foreach (var item in students)
             {
-                Console.WriteLine($"{item.Ident}\n" +
-                    $"{item.Name}\n" +
-                    $"{item.Surname} \n" +
-                    $"{item.Point} \n" +
-                    $"{item.Age}");
+                Console.WriteLine($"Student id: {item.Ident}\n" +
+                    $"Student name: {item.Name}\n" +
+                    $"Student surname: {item.Surname} \n" +
+                    $"Student point: {item.Point} \n" +
+                    $"Student age: {item.Age}");
             }
         }
      /*   public bool CheckGroupNo(string groupNo)

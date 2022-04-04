@@ -9,7 +9,7 @@ namespace UserAccount
         static void Main(string[] args)
         {
 
-            Group group = new Group();
+            
 
             Student student = new Student();
 
@@ -23,7 +23,7 @@ namespace UserAccount
 
             do
             {
-                Console.WriteLine("\n1)Add students \n" +
+                Console.WriteLine("\n1)Create group \n" +
                     "2)  Show info \n" +
                     "3) All groups and students");
                 int input = Convert.ToInt32(Console.ReadLine());
@@ -111,21 +111,46 @@ namespace UserAccount
                         break;*/
                     #endregion
                     case 1:
-                        Console.Write("Write student name: ");
-                        student.Name = Console.ReadLine();
+                        Group group = new Group();
+                        Console.WriteLine("group created \n" );
+                        int addstd; 
+                        do
+                        {
 
-                        Console.Write("Write student surname: ");
-                        student.Surname = Console.ReadLine();
+                            Console.WriteLine("1. Add student\n" +
+                                               "2. Show info \n" +
+                                               "0. Go back to menu ");
+                            addstd = Convert.ToInt32(Console.ReadLine());
+                            switch (addstd)
+                            {
+                                case 1:
+                                    Console.Write("Write student name: ");
+                                    student.Name = Console.ReadLine();
 
-                        Console.Write("Write student age: ");
-                        student.Age = Convert.ToInt32(Console.ReadLine());
+                                    Console.Write("Write student surname: ");
+                                    student.Surname = Console.ReadLine();
 
-                        Console.Write("Write student point: ");
-                        student.Point = Convert.ToInt32(Console.ReadLine());
-                        group.AddStudent(student);
+                                    Console.Write("Write student age: ");
+                                    student.Age = Convert.ToInt32(Console.ReadLine());
+
+                                    Console.Write("Write student point: ");
+                                    student.Point = Convert.ToInt32(Console.ReadLine());
+                                    group.AddStudent(student);
+                                    break;
+                                    case 2:
+                                    group.Info();
+                                    break;
+                                default:
+                                    break;
+                            }
+                        } while (addstd!=0);
+                       
                         break;
+
                     case 2:
-                        group.Info();
+                        
+                        break;
+                    case 3:
                         
                         break;
                     default :
