@@ -1,5 +1,6 @@
 ﻿1.1 Student class
-- Id - qıraqdan set etmək olmayacaq yalnız get etmək olacaq və hər dəfə yeni bir Student obyekt yaradıldıqda avtomatik bir vahid artacaq.
+- Id - qıraqdan set etmək olmayacaq yalnız get etmək olacaq və hər dəfə 
+  yeni bir Student obyekt yaradıldıqda avtomatik bir vahid artacaq.
 - Name
 - Surname
 - Age

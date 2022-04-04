@@ -11,7 +11,7 @@ namespace UserAccount
 
             
 
-            Student student = new Student();
+            
 
             
             
@@ -118,27 +118,34 @@ namespace UserAccount
                         {
 
                             Console.WriteLine("1. Add student\n" +
-                                               "2. Show info \n" +
-                                               "0. Go back to menu ");
+                                              "2. Show info \n" +
+                                              "3. Show students in group \n"+
+                                              "0. Go back to menu ");
                             addstd = Convert.ToInt32(Console.ReadLine());
                             switch (addstd)
                             {
                                 case 1:
                                     Console.Write("Write student name: ");
-                                    student.Name = Console.ReadLine();
+                                    string Name = Console.ReadLine();
 
                                     Console.Write("Write student surname: ");
-                                    student.Surname = Console.ReadLine();
+                                    string Surname = Console.ReadLine();
 
                                     Console.Write("Write student age: ");
-                                    student.Age = Convert.ToInt32(Console.ReadLine());
+                                    int Age = Convert.ToInt32(Console.ReadLine());
 
                                     Console.Write("Write student point: ");
-                                    student.Point = Convert.ToInt32(Console.ReadLine());
+                                    int Point = Convert.ToInt32(Console.ReadLine());
+
+                                    Student student = new Student(Name, Surname, Age, Point);
                                     group.AddStudent(student);
                                     break;
                                     case 2:
+                                    group.ShowInfo();
                                     group.Info();
+                                    break;
+                                case 3:
+                                group.GetStudents();
                                     break;
                                 default:
                                     break;
@@ -152,6 +159,7 @@ namespace UserAccount
                         break;
                     case 3:
                         
+
                         break;
                     default :
                         break;

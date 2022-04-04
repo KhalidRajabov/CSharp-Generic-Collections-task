@@ -123,9 +123,13 @@ namespace UserAccount.Models
         }*/
         public void GetStudents()
         {
-            foreach (Student std in students)
+            foreach (Student item in students)
             {
-                Console.WriteLine(std);
+                Console.WriteLine($"Student id: {item.Ident}\n" +
+                        $"Student name: {item.Name}\n" +
+                        $"Student surname: {item.Surname} \n" +
+                        $"Student point: {item.Point} \n" +
+                        $"Student age: {item.Age}");
             }
         }
     }

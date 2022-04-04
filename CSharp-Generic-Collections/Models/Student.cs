@@ -8,7 +8,7 @@ namespace UserAccount.Models
 {
     internal class Student
     {
-        private static int _ident = 0;
+        private static int _ident;
         public int Ident { get; }
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -29,13 +29,10 @@ namespace UserAccount.Models
                 }
                 else
                 {
-
                     _point = value;
-                    _ident++;
-                    
+                    _ident++;   
                     return;
                 }
-
             }
         }
         public Student()
@@ -52,7 +49,7 @@ namespace UserAccount.Models
         public void ShowInfo()
         {
             Console.WriteLine($"\n" +
-                $"Student Id number: {_ident} \n" +
+                $"Student Id number: {Ident} \n" +
                 $"Student name: {Name}\n" +
                 $"Student surname: {Surname}\n" +
                 $"Studnet point: {Point} \n" +
