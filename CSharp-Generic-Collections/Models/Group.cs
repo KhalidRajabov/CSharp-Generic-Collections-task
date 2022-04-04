@@ -46,7 +46,8 @@ namespace UserAccount.Models
         {
             foreach (var item in students)
             {
-                Console.WriteLine($"{item.Name}\n" +
+                Console.WriteLine($"{item.Ident}\n" +
+                    $"{item.Name}\n" +
                     $"{item.Surname} \n" +
                     $"{item.Point} \n" +
                     $"{item.Age}");

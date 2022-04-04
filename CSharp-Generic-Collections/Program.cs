@@ -8,17 +8,23 @@ namespace UserAccount
         enum StudentChoices { ShowStudents = 1, Get_Student_by_ID, Add_Student, Quit };*/
         static void Main(string[] args)
         {
-            
-           
 
-           
+            Group group = new Group();
+
+            Student student = new Student();
+
+            
+            
+            
+
+
 
 
 
             do
             {
-                Console.WriteLine("\n1)Create a new group \n" +
-                    "2)  Add students \n" +
+                Console.WriteLine("\n1)Add students \n" +
+                    "2)  Show info \n" +
                     "3) All groups and students");
                 int input = Convert.ToInt32(Console.ReadLine());
 
@@ -105,12 +111,6 @@ namespace UserAccount
                         break;*/
                     #endregion
                     case 1:
-                        break;
-                    case 2:
-                        Group Group = new Group();
-                        
-                        Student student = new Student();
-                        
                         Console.Write("Write student name: ");
                         student.Name = Console.ReadLine();
 
@@ -122,12 +122,13 @@ namespace UserAccount
 
                         Console.Write("Write student point: ");
                         student.Point = Convert.ToInt32(Console.ReadLine());
-                        Group.AddStudent(student);
-                        Group.Info();
-                        student.ShowInfo();
+                        group.AddStudent(student);
                         break;
-
-                        default :
+                    case 2:
+                        group.Info();
+                        
+                        break;
+                    default :
                         break;
 
                 }
